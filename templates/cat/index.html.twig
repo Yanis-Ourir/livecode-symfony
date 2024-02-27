@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CatController!{% endblock %}
+
+{% block body %}
+
+{% for cat in cats %}
+    <p> {{ cat.name }} </p>
+    <p> {{ cat.age }} </p>
+    <a href="{{ path('app_cat_show', {id: cat.id}) }}" class="btn btn-info">Voir + </a>
+    <a href="{{ path('app_update_cat', {id: cat.id}) }}" class="btn btn-danger">Maj </a>
+    <a href="{{ path('app_cat_delete', {id: cat.id}) }}" class="btn btn-danger">Supprimer </a>
+{% endfor %}
+
+{% endblock %}
