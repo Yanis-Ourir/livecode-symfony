@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test Controller{% endblock %}
+
+{% block body %}
+
+    Bonjour, {{ prenom }}
+
+    chat : {{ cat.name }} {{ cat.getAge() }}
+
+{% endblock %}
